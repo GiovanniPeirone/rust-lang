@@ -1,12 +1,13 @@
 use std::io;
 
 fn main() {
+    print!("cual es el numero:");
+    let n1: String = input("cual es el numero:".to_string());
+    println!("{}", n1);
 }
 
-fn input() -> String{
+fn input(ask:String) -> String{
     let mut line = String::new();
-    println!("Enter your name:");
     let b1 = std::io::stdin().read_line(&mut line).unwrap();
-    println!("Hello, {}", line);
-    println!("No of bytes read: {}", b1);
+    return b1.to_string();
 }
